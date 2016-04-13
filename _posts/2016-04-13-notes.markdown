@@ -1,0 +1,56 @@
+---
+layout: post
+title:  "Notes"
+date:   2016-04-09 11:17:21 +0200
+categories: notes
+---
+
+- [Drone.IO](https://drone.io): Browser Testing. Your build environment
+  includes Firefox, Chrome and Xvfb. This means you can run your Selenium,
+  PhantomJS and other browser tests with ease. Awesome language support.
+
+Eunit and io:format
+-------------------
+
+You could use dbg (the Erlang tracer) for this. You can trace the calls made to
+io:format/2 by a process and receive a trace message from it. You can use this
+trace message to assert that what is being used to call io:format/2,3 is
+correct. The benefit from this is that you don't have to interfere with EUnit
+since it already is capturing the actual IO messages.
+
+A small example could be (adjust to your unit test[s]):
+
+
+{% highlight erlang linenos %}
+1> HandleFun = fun(Trace, Parent) -> Parent ! Trace, Parent end.
+#Fun<erl_eval.12.113037538>
+2> dbg:tracer(process, {HandleFun, self()}).
+{ok,<0.119.0>}
+3> IOCallingFun = fun(F) ->
+3>   timer:sleep(5000),
+3>   io:format("Random: ~p~n",[random:uniform(1000)]),
+3>   F(F)
+3> end.
+#Fun<erl_eval.6.13229925>
+4> PidToTrace = erlang:spawn_link(fun() -> IOCallingFun(IOCallingFun) end).
+<0.123.0>
+Random: 93
+Random: 444
+5> dbg:p(PidToTrace, [c]).
+{ok,[{matched,nonode@nohost,1}]}
+6> dbg:tp(io, format, []).
+{ok,[{matched,nonode@nohost,3}]}
+Random: 724
+Random: 946
+Random: 502
+7> flush().
+Shell got {trace,<0.123.0>,call,{io,format,["Random: ~p~n",[724]]}}
+Shell got {trace,<0.123.0>,call,{io,format,["Random: ~p~n",[946]]}}
+Shell got {trace,<0.123.0>,call,{io,format,["Random: ~p~n",[502]]}}
+ok
+8> exit(PidToTrace).
+** exception exit: <0.123.0>
+9> dbg:stop_clear().
+ok
+10>
+{% endhighlight %}
