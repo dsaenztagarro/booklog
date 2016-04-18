@@ -20,7 +20,6 @@ since it already is capturing the actual IO messages.
 
 A small example could be (adjust to your unit test[s]):
 
-
 {% highlight erlang linenos %}
 1> HandleFun = fun(Trace, Parent) -> Parent ! Trace, Parent end.
 #Fun<erl_eval.12.113037538>
