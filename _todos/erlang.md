@@ -6,3 +6,4 @@ categories: todo
 ---
 
 - Add to project [rebar3](http://www.rebar3.org). Project erlang node (C).
+- Use `dbg:tracer` in `kitty_server` to check `io:format` calls
