@@ -9,6 +9,14 @@ categories: erlang eunit
 
 ## Debugging macros
 
+```erlang
+-module(trade_fsm).
+-include_lib("eunit/include/eunit.hrl").
+% ...
+idle(Event, Data) ->
+    ?debugMsg(">>> idle"),
+```
+
 **debugHere**
 Just prints a marker showing the current file and line number. Note that this is an argument-less macro. The result is always ok.
 
