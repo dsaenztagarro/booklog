@@ -23,9 +23,12 @@ markdown: kramdown
 collections:
   - active_projects
   - todos
+  - questions
 
 collections:
   active_projects:
     output: true
   todos:
+    output: true
+  questions:
     output: true

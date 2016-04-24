@@ -6,18 +6,57 @@ categories: erlang eunit
 ---
 
 ```erlang
-%% Api
+% Client
+
+%%% Api
 
 introspection_statename(StateName) ->
     gen_fsm:sync_send_all_state_event(StateName,which_statename).
 
-%% gen_fsm callbacks
+%%% gen_fsm callbacks
 
 handle_sync_event(which_statename, _From, StateName, LoopData) ->
     {reply, StateName, StateName, LoopData};
+
+% Test
+
+valid_initial_status(Pid) ->
+    [?_assertEqual(idle, trade_fsm:introspection_statename(Pid))].
 ```
 
 Cleaner way:
+
+```erlang
+% Test
+{CurrentStateName, _CurrentStateData} = sys:get_state(Pid),
+?assertEqual(idle, CurrentStateName)
+```
+
+Comparing implementations from `eunit_fsm`:
+
+{% highlight ruby linenos %}
+%% Bad
+
+translateCmd(Pid, {state,is,X}) ->
+    case getStateName(Pid) of
+        X -> ok;
+        V -> erlang:error({statename_match_failed,
+                           [{module, ?MODULE},
+                            {line, ?LINE},
+                            {expected, X},
+                            {value, V}]})
+    end.
+
+getStateName(Pid) ->
+    {CurrentStateName, _CurrentStateData} = sys:get_state(Pid),
+    CurrentStateName.
+
+%% Good
+
+translateCmd(Pid, {state,is,X}) ->
+    {CurrentStateName, _CurrentStateData} = sys:get_state(Pid),
+    ?assertEqual(X, CurrentStateName).
+{% endhighlight %}
 
 **Module sys**
 

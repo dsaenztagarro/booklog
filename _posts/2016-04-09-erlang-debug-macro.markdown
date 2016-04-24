@@ -1,13 +1,9 @@
 ---
 layout: post
-title:  "EUnit Erlang"
+title:  "Erlang EUnit macros"
 date:   2016-04-09 11:17:21 +0200
 categories: erlang eunit
 ---
-
-`debugger:start()`
-
-## Debugging macros
 
 ```erlang
 -module(trade_fsm).
