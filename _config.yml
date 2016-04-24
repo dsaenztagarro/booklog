@@ -21,14 +21,11 @@ github_username:  dsaenztagarro
 markdown: kramdown
 
 collections:
-  - active_projects
+  - projects
   - todos
-  - questions
 
 collections:
-  active_projects:
+  projects:
     output: true
   todos:
-    output: true
-  questions:
     output: true
