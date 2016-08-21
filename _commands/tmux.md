@@ -7,11 +7,6 @@ categories: command
 
 - List sessions: `tmux ls`
 
-- Detach session: `PREFIX D`
-- Turning a Pane into a Window: `PREFIX !`
-
-
-
 - Move current tmux window to target number: `:swap-window -t 1`
 
 - Sync tmux panes: `:setw synchronize-panes`.
@@ -24,3 +19,9 @@ tmux send-keys -t <session_name>:<nwindow>.<npane> '[keys]' C-m
 
 tmux send-keys -t development:1.1 '[keys]' C-m
 {% endhighlight %}
+
+### Shortcuts
+
+- Detach session: `PREFIX D`
+
+- Turning a Pane into a Window: `PREFIX !`
