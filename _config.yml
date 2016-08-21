@@ -23,9 +23,12 @@ markdown: kramdown
 collections:
   - projects
   - todos
+  - miscellaneous
 
 collections:
   projects:
     output: true
   todos:
+    output: true
+  miscellaneous:
     output: true
