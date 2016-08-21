@@ -14,5 +14,3 @@ for config in "$HOME"/.bashrc.d/*.bash ; do
 done
 unset -v config
 ```
-
-- Move current tmux window to target number: `tmux swap-window -t 1`
