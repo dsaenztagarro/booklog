@@ -2,7 +2,7 @@
 layout: post
 title:  "Vim"
 date:   2016-04-24 18:00:00 +0100
-categories: questions
+categories: command
 ---
 
 - `<C-R><C-R>a` paste content of register a (Insert mode)
