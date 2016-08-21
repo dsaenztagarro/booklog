@@ -5,7 +5,7 @@ date:   2016-04-24 18:00:00 +0100
 categories: command
 ---
 
-- `<C-R><C-R>a` paste content of register a (Insert mode)
+- `<C-R>a` paste content of register a (Insert mode)
 
 - `:silent grep WORD | copen`:
   * ":silent" will also avoid the hit-enter prompt
@@ -17,10 +17,10 @@ categories: command
 
 - `3fn` search for the third `n` in the line
 
-```
+{% highlight bash %}
 :args `git grep -l findme`
 :args `find . -type f`
-```
+{% endhighlight %}
 
 - Vim has bufdo, windo, tabdo and argdo
 
