@@ -15,3 +15,7 @@ First, find the hash of the commit you want to re-apply, then apply it.
 git log
 git cherry-pick hash
 ```
+
+### References
+
+- [LGTM](https://lgtm.co)

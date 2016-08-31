@@ -25,3 +25,8 @@ tmux send-keys -t development:1.1 '[keys]' C-m
 - Detach session: `PREFIX D`
 
 - Turning a Pane into a Window: `PREFIX !`
+
+### Setup
+
+- http://collectiveidea.com/blog/archives/2014/02/18/a-simple-pair-programming-setup-with-ssh-and-tmux/
+

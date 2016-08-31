@@ -14,3 +14,10 @@ for config in "$HOME"/.bashrc.d/*.bash ; do
 done
 unset -v config
 ```
+
+- Golang: git tool for cleaning merged brands and test brands. Delete remote branchs related.
+
+- Console manager for ftp/sftp.
+
+- Configure ODROIDs.
+
