@@ -15,6 +15,17 @@ First, find the hash of the commit you want to re-apply, then apply it.
 git log
 git cherry-pick hash
 ```
+You can use git cherry-pick to accept only the specific remote commits you want
+
+### How to preview git-pull without doing fetch?
+
+```
+git fetch
+# to show the log entries between your last common commit and the origin branch
+git log HEAD...origin
+# to show the diffs
+git diff HEAD...origin
+```
 
 ### References
 
