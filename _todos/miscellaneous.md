@@ -21,3 +21,11 @@ unset -v config
 
 - Configure ODROIDs.
 
+- `Library/LaunchAgents/local.dsaenz.booklog.plist` ProgramArguments: port + directory
+
+```xml
+    <key>ProgramArguments</key>
+    <array>
+      <string>/Users/dst/Scripts/local.dsaenz.booklog.sh</string>
+    </array>
+```
