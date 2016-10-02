@@ -21,3 +21,8 @@ ssh-add -K ~/.ssh/id_rsa
 ```
 ssh-keygen -f ~/.ssh/id_rsa -p
 ```
+
+# References
+
+- [OpenBSD](http://www.openbsd.org/)
+- [OpenSSH](http://www.openssh.com/)
