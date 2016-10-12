@@ -5,6 +5,8 @@ date:   2016-04-24 18:00:00 +0100
 categories: command
 ---
 
+- `vert sfind myfile.c`
+
 - `<C-R>a` paste content of register a (Insert mode)
 
 - `:silent grep WORD | copen`:
