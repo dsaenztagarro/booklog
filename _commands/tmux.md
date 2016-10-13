@@ -30,3 +30,40 @@ tmux send-keys -t development:1.1 '[keys]' C-m
 
 - http://collectiveidea.com/blog/archives/2014/02/18/a-simple-pair-programming-setup-with-ssh-and-tmux/
 
+### Pair
+
+#### Tmux guest
+
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+ssh -i ~/.ssh/pair_rsa pair@192.168.1.185
+
+#### Tmux host
+
+- System Preferences => Sharing => Remote Login
+- System Preferences => Sharing => Uses & Groups (Alias pair)
+
+Edit file
+
+```
+# /private/etc/ssh/sshd_config
+PasswordAuthentication no
+ChallengeResponseAuthentication no
+```
+
+Restart sshd daemon
+
+```
+sudo launchctl stop com.openssh.sshd
+sudo launchctl start com.openssh.sshd
+```
+
+cat pair_rsa.pub >> ~/.ssh/authorized_keys
+
+Edit `~/.ssh/authorized_keys` to add command
+
+```
+command="/usr/local/bin/tmux attach -t pair",no-port-forwarding,no-x11-forwarding,no-agent-forwarding KEY_TYPE KEY COMMENT
+```
+
+
