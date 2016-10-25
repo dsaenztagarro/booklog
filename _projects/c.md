@@ -121,3 +121,11 @@ Add system headers to vim path (example):
 ```
 set path=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include`
 ```
+
+### Core dumps
+
+By default, the Ubuntu kernel is configured to use apport to log coredumps. You can override this by overwriting /proc/sys/kernel/core_pattern, check the "Naming of core dump files" section in man core for details. For example:
+
+echo '/tmp/core.%e.%p.%t' | sudo tee /proc/sys/kernel/core_pattern
+
+Apport writes core dumps to /var/crash/_path_to_program.userid.crash, BUT it will only do so for applications installed from the main ubuntu apt repositories.
