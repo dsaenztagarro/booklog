@@ -6,7 +6,7 @@ tags:
 - miscellaneous
 ---
 
-- Scanning ports
+### Scanning ports in remote machine
 
 ```
 brew install nmap
@@ -14,8 +14,14 @@ nmap -p- -sV <ip-address>
 nmap -p1-65535 -sV <ip-address>
 ```
 
-- Add user to sudo group
+### Add user to sudo group (ubuntu)
 
 ```
 gpasswd -a <user> group
+```
+
+### Release ports
+
+```
+kill -9 (lsof -i tcp:9200 | awk 'NR>1{print $2}')
 ```
