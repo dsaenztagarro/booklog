@@ -37,5 +37,6 @@ BUNDLE_BUILD__EVENTMACHINE: "--with-cppflags=-I/usr/local/opt/openssl/include"
 Check [RubyGems blog](http://blog.rubygems.org) for updates
 
 ```
+gem --version
 gem update --system 2.6.8
 ```
