@@ -38,5 +38,5 @@ Check [RubyGems blog](http://blog.rubygems.org) for updates
 
 ```
 gem --version
-gem update --system 2.6.8
+gem update --system
 ```
