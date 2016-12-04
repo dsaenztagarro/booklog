@@ -119,7 +119,57 @@ getconf GNU_LIBPTHREAD_VERSION
 Add system headers to vim path (example):
 
 ```
-set path=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include`
+set path+=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include
+```
+
+### Debugging
+
+```
+# Activate coredumps
+ulimit -c unlimited
+
+# /cores/core.<PID> (macos)
+```
+
+### Links
+
+- [gcc extensions](https://gcc.gnu.org/onlinedocs/gcc/C-Extensions.html#C-Extensions)
+- [container_of macro](http://radek.io/2012/11/10/magical-container_of-macro/)
+
+
+### Codesign gdb on Mac OS X Yosemite (10.10.2)
+
+Mac OS X 10.10.2 does not come with gdb pre installed. It is available on homebrew:
+
+```
+$ brew tap homebrew/dupes
+$ brew install gdb
+```
+
+The binary is installed on /usr/local/bin
+
+When initializing gdb on a program (a.out) it will produce the following error:
+
+```
+Starting program: a.out
+Unable to find Mach task port for process-id XXXXX: (os/kern) failure (0x5).
+ (please check gdb is codesigned - see taskgated(8))
+```
+
+Start Keychain Access application (/Applications/Utilities/Keychain Access.app)
+This error occurs because OSX implements a pid access policy which requires a digital signature for binaries to access other processes pids. To enable gdb access to other processes, we must first code sign the binary. This signature depends on a particular certificate, which the user must create and register with the system.
+
+To create a code signing certificate, open the Keychain Access application. Choose menu Keychain Access -> Certificate Assistant -> Create a Certificate…
+
+Choose a name for the certificate (e.g., gdb-cert), set Identity Type to Self Signed Root, set Certificate Type to Code Signing and select the Let me override defaults. Click several times on Continue until you get to the Specify a Location For The Certificate screen, then set Keychain to System.
+
+Double click on the certificate, open Trust section, and set Code Signing to Always Trust. Exit Keychain Access application.
+
+Restart the `taskgated` service, and sign the binary.
+
+```
+$ sudo killall taskgated
+$ codesign -fs gdb-cert /usr/local/bin/gdb
 ```
 
 ### Core dumps

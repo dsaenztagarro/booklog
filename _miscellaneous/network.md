@@ -6,7 +6,7 @@ tags:
 - miscellaneous
 ---
 
-### Scanning ports in remote machine
+### Scanning ports in remote machine (macos)
 
 ```
 brew install nmap
