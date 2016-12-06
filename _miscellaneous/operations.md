@@ -6,9 +6,15 @@ tags:
 - miscellaneous
 ---
 
-# Check OS version
+# Check OS version (macos)
 
 ```
 sw_vers
 system_profiler SPSoftwareDataType
+```
+
+# Change shell (ubuntu)
+
+```
+chsh --shell /bin/bash <username>
 ```
