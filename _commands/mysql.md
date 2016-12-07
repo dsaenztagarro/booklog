@@ -14,3 +14,15 @@ CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
 FLUSH PRIVILEGES;
 ```
+
+## Dumps
+
+```sql
+-- You can dump the database into a file using:
+
+mysqldump -h hostname -u user --password=password databasename > filename
+
+-- you can restore the info to the database again using:
+
+mysql -h hostname -u user --password=password databasename < filename
+```
