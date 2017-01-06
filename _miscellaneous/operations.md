@@ -13,6 +13,20 @@ sw_vers
 system_profiler SPSoftwareDataType
 ```
 
+# Create gpg key (macos)
+
+```
+gpg --gen-key
+gpg --list-secret-keys --keyid-format LONG
+gpg --armor --export 7BEA262B83439EC3
+
+# Config git to use your gpg key
+git config --global user.signingkey 7BEA262B83439EC3
+
+# Create your signed commit
+git commit -S -m your commit message
+```
+
 # Change shell (ubuntu)
 
 ```
@@ -44,6 +58,8 @@ AllowGroups sshusers
 # AllowUsers root cirujanos
 
 # Add ssh public keys to authorized keys
+
+service ssh restart
 ```
 
 ## Permissions release process (ubuntu)

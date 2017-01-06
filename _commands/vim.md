@@ -51,3 +51,10 @@ Horizontally to vertically
 `<C-R>w H` moves the current window to full-height at far left
 
 See also `:help opening-window`
+
+### Indent from insert mode
+
+memo: inDenT
+
+`<C-R>d` indent to the left
+`<C-R>t` indent to the right
