@@ -40,3 +40,7 @@ Check [RubyGems blog](http://blog.rubygems.org) for updates
 gem --version
 gem update --system
 ```
+
+### TODO
+
+- Why Time.current is better than Time.zone.now
