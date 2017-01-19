@@ -1,39 +1,18 @@
 ---
 layout: post
-title:  "Operations"
+title:  "Operations Ubuntu"
 date:   2016-03-19 02:00:00 +0100
 tags:
 - miscellaneous
 ---
 
-# Check OS version (macos)
-
-```
-sw_vers
-system_profiler SPSoftwareDataType
-```
-
-# Create gpg key (macos)
-
-```
-gpg --gen-key
-gpg --list-secret-keys --keyid-format LONG
-gpg --armor --export 7BEA262B83439EC3
-
-# Config git to use your gpg key
-git config --global user.signingkey 7BEA262B83439EC3
-
-# Create your signed commit
-git commit -S -m your commit message
-```
-
-# Change shell (ubuntu)
+# Change shell
 
 ```
 chsh --shell /bin/bash <username>
 ```
 
-# Create user (ubuntu)
+# Create user
 
 ```
 sudo adduser newuser
@@ -62,17 +41,15 @@ AllowGroups sshusers
 service ssh restart
 ```
 
-## Permissions release process (ubuntu)
+## Permissions release process
 
 ```
 chown -R cirujanos:www-data /var/www/cirujanos/
 ```
 
-## Start ssh agent (ubuntu)
+## Start ssh agent
 
 ```
 eval `ssh-agent -s`
 ssh-add
 ```
-
-
