@@ -1,0 +1,25 @@
+---
+layout: post
+title:  "OCA"
+date:   2017-01-15 18:00:00 +0100
+categories: certificate java oracle
+---
+
+# Java SE 8 Programmer I
+
+- `String[] args`, `String args[]`, `String... args`
+- `java.lang` automatically imported.
+- If you explicitly import a class name, it takes precedence over any wildcards present.
+
+```
+java -cp ".:/tmp/someOtherLocation:/tmp/myJar.jar:/tmp/directoryWithJars/*:" myPackage.MyClass
+```
+
+# Documentation
+
+- [Java Platform, Standard Edition (Java SE) 8](http://docs.oracle.com/javase/8/)
+- [Java SE Documentation](http://www.oracle.com/technetwork/java/javase/documentation/index.html)
+
+# Blogs
+
+- [Kohsuke Kawaguchi](http://kohsuke.org)
