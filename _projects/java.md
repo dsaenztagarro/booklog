@@ -28,3 +28,22 @@ jdb -attach localhost:6001 -sourcepath src/main/java/
 jdb -listen 6000 -sourcepath src/main/java/
 java -Xdebug -Xrunjdwp:transport=dt_socket,server=n,address=6000 MyJavaClass
 ```
+
+## Webapps
+
+```
+# Inspect WAR
+jar -tvf path_to_war_filename
+```
+
+## Apache Tomcat
+
+Update `conf/tomcat_users.xml` to access `http://localhost:8080/manager/html`
+
+```xml
+  <user username="admin" password="admin" roles="manager-gui"/>
+```
+
+- [Oracle Developers](https://developer.oracle.com)
+- [JAX-WS Release Documentation](https://jax-ws.java.net/nonav/2.2.6/docs/)
+- [GlassFish Server Documentation](https://glassfish.java.net/documentation.html)
