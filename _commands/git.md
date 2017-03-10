@@ -39,6 +39,20 @@ $ git branch -r --merged |
   xargs git push origin --delete
 ```
 
+Also: `git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d`
+
+### delete remote track of branches already merged
+
+`git remote prune <name>`
+
+Deletes all stale remote-tracking branches under <name>. These stale branches have already been removed from the remote repository referenced by <name>, but are still locally available in "remotes/<name>".
+
+```bash
+git remote prune origin
+```
+
+###
+
 ### References
 
 - [LGTM](https://lgtm.co)
