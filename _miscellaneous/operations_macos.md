@@ -16,6 +16,8 @@ system_profiler SPSoftwareDataType
 # Create gpg key
 
 ```
+brew install gpg
+
 gpg --gen-key
 gpg --list-secret-keys --keyid-format LONG
 gpg --armor --export 7BEA262B83439EC3

@@ -32,6 +32,13 @@ bundle config build.eventmachine --with-cppflags=-I/usr/local/opt/openssl/includ
 BUNDLE_BUILD__EVENTMACHINE: "--with-cppflags=-I/usr/local/opt/openssl/include"
 ```
 
+Updating bundler:
+
+```
+gem install bundler
+gem cleanup bundler
+```
+
 ### Update the RubyGems system software
 
 Check [RubyGems blog](http://blog.rubygems.org) for updates
