@@ -7,8 +7,6 @@ categories: command
 
 - List sessions: `tmux ls`
 
-- Move current tmux window to target number: `:swap-window -t 1`
-
 - Sync tmux panes: `:setw synchronize-panes`.
   You can optionally add `on` or `off` to specify which state you want; otherwise the option is simply toggled. This option is specific to one window, so it won’t change the way your other sessions or windows operate. When you’re done, toggle it off again by repeating the command.
 
@@ -19,6 +17,27 @@ tmux send-keys -t <session_name>:<nwindow>.<npane> '[keys]' C-m
 
 tmux send-keys -t development:1.1 '[keys]' C-m
 {% endhighlight %}
+
+### Reorder windows
+
+To let window number 3 and window number 1 swap their positions
+
+```
+:swap-window -s 3 -t 1
+```
+
+To swap the current window with the top window
+
+```
+:swap-window -t 1
+```
+
+Also:
+
+```
+bind-key -n C-S-Left swap-window -t -1
+bind-key -n C-S-Right swap-window -t +1
+```
 
 ### Shortcuts
 
