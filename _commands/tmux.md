@@ -55,7 +55,7 @@ bind-key -n C-S-Right swap-window -t +1
 
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 
-ssh -i ~/.ssh/pair_rsa pair@192.168.1.185
+ssh -i ~/.ssh/ssh_key_pair pair@192.168.1.185
 
 #### Tmux host
 
@@ -77,7 +77,7 @@ sudo launchctl stop com.openssh.sshd
 sudo launchctl start com.openssh.sshd
 ```
 
-cat pair_rsa.pub >> ~/.ssh/authorized_keys
+cat ssh_key_pair.pub >> ~/.ssh/authorized_keys
 
 Edit `~/.ssh/authorized_keys` to add command
 
@@ -85,4 +85,11 @@ Edit `~/.ssh/authorized_keys` to add command
 command="/usr/local/bin/tmux attach -t pair",no-port-forwarding,no-x11-forwarding,no-agent-forwarding KEY_TYPE KEY COMMENT
 ```
 
+### TODO
 
+```
+## Join windows: <prefix> s, <prefix> j
+bind-key j command-prompt -p "join pane from:"  "join-pane -s '%%'"
+bind-key s command-prompt -p "send pane to:"  "join-pane -t '%%'"
+break-pane
+```

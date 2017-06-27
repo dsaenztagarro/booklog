@@ -12,9 +12,11 @@ By default, the OS X installation does not use a my.cnf, and MySQL just uses the
 ## Create user
 
 ```sql
-CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
-GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
+CREATE USER 'rails_user'@'localhost' IDENTIFIED BY 'rails_user';
+GRANT ALL PRIVILEGES ON *. * TO 'rails_user'@'localhost';
 FLUSH PRIVILEGES;
+
+CREATE DATABASE rails_development;
 ```
 
 ### Permissions
