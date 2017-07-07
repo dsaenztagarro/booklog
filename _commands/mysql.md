@@ -47,3 +47,9 @@ mysqldump -h hostname -u user --password=password databasename > filename
 
 mysql -h hostname -u user --password=password databasename < filename
 ```
+
+## Stop server
+
+```
+mysqladmin -u root -p shutdown
+```
