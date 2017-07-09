@@ -21,12 +21,15 @@ github_username:  dsaenztagarro
 markdown: kramdown
 
 collections:
+  - certificates
   - projects
   - todos
   - miscellaneous
   - commands
 
 collections:
+  certificates:
+    output: true
   projects:
     output: true
   todos:

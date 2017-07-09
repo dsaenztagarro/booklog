@@ -58,3 +58,9 @@ memo: inDenT
 
 `<C-R>d` indent to the left
 `<C-R>t` indent to the right
+
+### Sorting lines
+
+```
+:.,+2!sort
+```
