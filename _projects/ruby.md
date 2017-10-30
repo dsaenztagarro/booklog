@@ -22,16 +22,6 @@ p foo.to_s                  # should raise exception (recycled)
 
 ### Bundler
 
-```
-bundle config build.eventmachine --with-cppflags=-I/usr/local/opt/openssl/include
-```
-
-```
-# ~/.bundle/config
----
-BUNDLE_BUILD__EVENTMACHINE: "--with-cppflags=-I/usr/local/opt/openssl/include"
-```
-
 Updating bundler:
 
 ```

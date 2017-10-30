@@ -41,7 +41,7 @@ bool :: a -> a -> Bool -> a
 
 # Conferences
 
-ZurichHack
+[ZurichHack](https://zurihac.info)
 
 # Video
 
@@ -69,6 +69,7 @@ configuration](http://docs.haskellstack.org/en/stable/yaml_configuration/)
 
 # Links
 
+[WHAT I WISH I KNEW WHEN LEARNING HASKELL](http://dev.stephendiehl.com/hask/)
 [Blog Alejandro Cabrera](https://blog.cppcabrera.com/posts/37-functor-traverse-fold-tree.html)
 [bytemyapp](http://bitemyapp.com/posts/2014-03-24-monads-bind-join-actions.html)
 [haskellbook](http://haskellbook.com/index.html)
