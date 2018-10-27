@@ -5,6 +5,41 @@ date:   2016-03-21 05:00:00 +0100
 categories: language
 ---
 
+# haskell-programming-1.0RC2-screen.pdf
+## chapter 1
+### 1.5 Beta reduction (Free variables)
+### 1.6 Multiple arguments
+Each lambda can only bind one parameter and can only accept one argument
+Functions that require multiple arguments have multiple, nested headd
+Currying: When you apply it once and eliminate the first (leftmost) head, the next one is applied and so on (page 42)
+### 1.7 Evaluation is simplification
+Beta normal form
+### 1.8 Combinators
+Lambda term with no free variables
+### 1.9 Divergence
+Lambda term omega: (λx.xx)(λx.xx)
+### 1.13 Definitions
+Normal order
+
+GHCI
+:q
+:l load module
+:m unload any module (return to Prelude)
+:r
+
+## chapter 2
+## 2.5 Evaluation
+Haskell evaluates by default to weak head normal form (WHNF)
+## 4.3 Anatomy of a data declaration (type)
+Type constructor. Data constructor. Instance of a typeclass.
+
+
+
+```
+*Main Lib> let triple :: Int -> Int; triple x = x * 3
+```
+
+
 Reducible expressions = `redexes`
 
 evaluation = reduction = normalizing = executing

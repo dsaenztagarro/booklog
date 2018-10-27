@@ -5,6 +5,12 @@ date:   2016-04-24 18:00:00 +0100
 categories: command
 ---
 
+### Checkout file from specific branch
+
+```
+git show remote_name/branch_name:path_to_file > path_to_file
+```
+
 ### Re-applying previous commits in Git
 
 If a new commit somehow overrides the changes from a previous commit, then you can re-apply the previous commit over the current one by using the cherry-pick command.
@@ -50,8 +56,6 @@ Deletes all stale remote-tracking branches under <name>. These stale branches ha
 ```bash
 git remote prune origin
 ```
-
-###
 
 ### References
 

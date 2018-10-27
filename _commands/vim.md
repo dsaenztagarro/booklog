@@ -34,23 +34,19 @@ categories: command
 :help K
 ```
 
-### To change two vertically split windows to horizonally split
+### :help key-notation
+- `<BS>` BackSpace
 
-```
-<C-R>w t <C-R>w K
-```
+### :help opening-window
+- `<C-R>w t` makes the first (topleft) window current
+- `<C-R>w K` moves the current window to full-width at the very top
+- `<C-R>w H` moves the current window to full-height at far left
+- `:vne :vnew` Like `:new`, but split vertically
 
-Horizontally to vertically
-
-```
-<C-R>w t <C-R>w H
-```
-
-`<C-R>w t` makes the first (topleft) window current
-`<C-R>w K` moves the current window to full-width at the very top
-`<C-R>w H` moves the current window to full-height at far left
-
-See also `:help opening-window`
+### :help digraph
+### :help digraph-usage
+`l* - λ`
+[Math symbols](http://www.alecjacobson.com/weblog/?p=443)
 
 ### Indent from insert mode
 

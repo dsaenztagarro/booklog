@@ -20,24 +20,6 @@ GC.start                    # start the garbage collector
 p foo.to_s                  # should raise exception (recycled)
 ```
 
-### Bundler
-
-Updating bundler:
-
-```
-gem install bundler
-gem cleanup bundler
-```
-
-### Update the RubyGems system software
-
-Check [RubyGems blog](http://blog.rubygems.org) for updates
-
-```
-gem --version
-gem update --system
-```
-
 ### TODO
 
 - Why Time.current is better than Time.zone.now

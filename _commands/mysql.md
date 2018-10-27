@@ -5,6 +5,15 @@ date:   2016-12-24 18:00:00 +0100
 categories: command
 ---
 
+```sql
+-- https://dev.mysql.com/doc/refman/5.7/en/server-status-variables.html
+show status where `variable_name` = 'Threads_connected';
+show status where `variable_name` = 'Connections'
+
+show processlist;
+kill "number from first col";
+```
+
 ## OS X
 
 By default, the OS X installation does not use a my.cnf, and MySQL just uses the default values. To set up your own my.cnf, you could just create a file straight in /etc.
@@ -12,6 +21,9 @@ By default, the OS X installation does not use a my.cnf, and MySQL just uses the
 ## Create user
 
 ```sql
+-- without password
+CREATE USER 'rails_user'@'localhost';
+-- with password
 CREATE USER 'rails_user'@'localhost' IDENTIFIED BY 'rails_user';
 GRANT ALL PRIVILEGES ON *. * TO 'rails_user'@'localhost';
 FLUSH PRIVILEGES;

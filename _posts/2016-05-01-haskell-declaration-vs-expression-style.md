@@ -51,7 +51,10 @@ filter =
 
 ### References
 
-[Declaration vs. expression style](https://wiki.haskell.org/Declaration_vs._expression_style)
-[Let vs. Where](https://wiki.haskell.org/Let_vs._Wher)
-[How to desugar Haskell
-code](http://www.haskellforall.com/2014/10/how-to-desugar-haskell-code. html)
+[Declaration vs. expression style][1]
+[Let vs. Where][2]
+[How to desugar Haskell code][3]
+
+[1]:https://wiki.haskell.org/Declaration_vs._expression_style
+[2]:https://wiki.haskell.org/Let_vs._Wher
+[3]:http://www.haskellforall.com/2014/10/how-to-desugar-haskell-code.html
