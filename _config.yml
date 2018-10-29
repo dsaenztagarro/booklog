@@ -22,7 +22,7 @@ markdown: kramdown
 
 collections:
   - certificates
-  - projects
+  - languages
   - todos
   - miscellaneous
   - commands
@@ -30,7 +30,7 @@ collections:
 collections:
   certificates:
     output: true
-  projects:
+  languages:
     output: true
   todos:
     output: true
