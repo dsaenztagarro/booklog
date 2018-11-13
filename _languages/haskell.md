@@ -74,6 +74,9 @@ Data.Bool
 
 bool :: a -> a -> Bool -> a
 
+# Blogs
+- [Simon Marlow](https://simonmar.github.io)
+
 # Conferences
 
 [ZurichHack](https://zurihac.info)
