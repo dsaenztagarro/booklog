@@ -106,8 +106,17 @@ configuration](http://docs.haskellstack.org/en/stable/yaml_configuration/)
 [Stack](http://docs.haskellstack.org/en/stable/README/)
 
 # Links
+- [Wikibooks Haskell](https://en.wikibooks.org/wiki/Haskell/Control_structures)
+- [GHCI options](https://downloads.haskell.org/~ghc/7.6.3/docs/html/users_guide/ghci-set.html)
+- [School of Haskell](https://www.schoolofhaskell.com)
+- [Avoiding partial functions](https://wiki.haskell.org/Avoiding_partial_functions)
+- [http://okmij.org/ftp/](http://okmij.org/ftp/Haskell/types.html#branding) See Haskell folder
+- [WHAT I WISH I KNEW WHEN LEARNING HASKELL](http://dev.stephendiehl.com/hask/)
+- [Blog Alejandro Cabrera](https://blog.cppcabrera.com/posts/37-functor-traverse-fold-tree.html)
+- [Bartosz Milewski's Programming Cafe](https://bartoszmilewski.com)
+- [bytemyapp](http://bitemyapp.com/posts/2014-03-24-monads-bind-join-actions.html)
+- [haskellbook](http://haskellbook.com/index.html)
 
-[WHAT I WISH I KNEW WHEN LEARNING HASKELL](http://dev.stephendiehl.com/hask/)
-[Blog Alejandro Cabrera](https://blog.cppcabrera.com/posts/37-functor-traverse-fold-tree.html)
-[bytemyapp](http://bitemyapp.com/posts/2014-03-24-monads-bind-join-actions.html)
-[haskellbook](http://haskellbook.com/index.html)
+# Companies
+[FPComplete](https://www.fpcomplete.com/blog)
+[Input|Output](https://iohk.io)

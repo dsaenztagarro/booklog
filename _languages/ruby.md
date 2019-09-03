@@ -23,3 +23,7 @@ p foo.to_s                  # should raise exception (recycled)
 ### TODO
 
 - Why Time.current is better than Time.zone.now
+
+### Books
+
+- Text Processing with Ruby: Extract Value from the Data That Surrounds You

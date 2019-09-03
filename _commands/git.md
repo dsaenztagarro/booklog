@@ -5,9 +5,10 @@ date:   2016-04-24 18:00:00 +0100
 categories: command
 ---
 
-### Checkout file from specific branch
-
 ```
+gitk --follow db/schema.rb
+
+# Checkout file from specific branch
 git show remote_name/branch_name:path_to_file > path_to_file
 ```
 
