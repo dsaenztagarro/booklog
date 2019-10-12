@@ -106,6 +106,7 @@ configuration](http://docs.haskellstack.org/en/stable/yaml_configuration/)
 [Stack](http://docs.haskellstack.org/en/stable/README/)
 
 # Links
+- [ghc](https://gitlab.haskell.org/ghc/ghc)
 - [Wikibooks Haskell](https://en.wikibooks.org/wiki/Haskell/Control_structures)
 - [GHCI options](https://downloads.haskell.org/~ghc/7.6.3/docs/html/users_guide/ghci-set.html)
 - [School of Haskell](https://www.schoolofhaskell.com)
